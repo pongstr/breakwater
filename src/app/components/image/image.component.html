@@ -11,6 +11,13 @@
     </div>
 
     <div class="image-component-toolbar__column toolbar-column--text-center">
+      <button mat-icon-button aria-label="Show Information"
+        matTooltip="Show Information"
+        matTooltipPosition="below"
+        (click)="showInfo()">
+        <mat-icon aria-hidden="false">image</mat-icon>
+      </button>
+
       <button mat-icon-button aria-label="Share Photo"
         matTooltip="Share this Photo"
         matTooltipPosition="below"
@@ -18,13 +25,7 @@
         <mat-icon aria-hidden="false">share</mat-icon>
       </button>
 
-      <button mat-icon-button aria-label="Show Information"
-        matTooltip="Show Information"
-        matTooltipPosition="below"
-        (click)="showInfo()">
-        <mat-icon aria-hidden="false">copyright</mat-icon>
-      </button>
-
+      <!--
       <button mat-icon-button  aria-label="Add to Favourites"
         matTooltip="Add to Favourites"
         matTooltipPosition="below">
@@ -36,6 +37,7 @@
         matTooltipPosition="below">
         <mat-icon aria-hidden="false">delete_outline</mat-icon>
       </button>
+       -->
     </div>
 
     <div class="image-component-toolbar__column toolbar-column--text-right">

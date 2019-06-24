@@ -7,6 +7,8 @@ import { Store } from '@ngrx/store';
 import * as reducers from 'app/store/reducers';
 import { Breakwater } from 'app/app.types';
 import { Observable } from 'rxjs';
+import { ImageInfoComponent } from '../image-info/image-info.component';
+import { ImageShareComponent } from '../image-share/image-share.component';
 
 @Component({
   selector: 'app-image',
@@ -36,6 +38,10 @@ export class ImageComponent implements OnInit {
 
   @HostListener('window:keyup', ['$event'])
   KeyboardEvent(event: KeyboardEvent) {
+    if (event.keyCode === 27) {
+      this.router.navigate(['/']);
+    }
+
     if (event.keyCode === 37) {
       this.backward();
       return;
@@ -71,11 +77,13 @@ export class ImageComponent implements OnInit {
   }
 
   showInfo() {
-    return; // open bottom sheet here
+    this.bottomSheet.open(ImageInfoComponent, { data: this.model.user });
+    return;
   }
 
   showShare() {
-    return; // open bottom sheet here
+    this.bottomSheet.open(ImageShareComponent, { data: this.model.links });
+    return;
   }
 
   goBack() {
@@ -91,7 +99,6 @@ export class ImageComponent implements OnInit {
   }
 
   backward() {
-    console.log('here')
     this.router.navigate([`photos/${this.prev.id}`]);
   }
 }

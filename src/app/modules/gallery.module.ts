@@ -9,6 +9,8 @@ import { MaterialModule } from 'app/modules/material.module';
 import { AppReducers } from 'app/store/reducers'
 import { GridComponent } from 'app/components/grid/grid.component';
 import { ImageComponent } from 'app/components/image/image.component';
+import { ImageInfoComponent } from 'app/components/image-info/image-info.component';
+import { ImageShareComponent } from 'app/components/image-share/image-share.component';
 
 @NgModule({
   imports: [
@@ -21,9 +23,14 @@ import { ImageComponent } from 'app/components/image/image.component';
   ],
   declarations: [
     GridComponent,
-    ImageComponent
+    ImageComponent,
+    ImageInfoComponent,
+    ImageShareComponent
   ],
-  entryComponents: [],
+  entryComponents: [
+    ImageInfoComponent,
+    ImageShareComponent
+  ],
   providers: [],
 
 })
