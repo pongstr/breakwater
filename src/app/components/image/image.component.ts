@@ -7,6 +7,8 @@ import { Store } from '@ngrx/store';
 import * as reducers from 'app/store/reducers';
 import { Breakwater } from 'app/app.types';
 import { Observable } from 'rxjs';
+import { ImageInfoComponent } from '../image-info/image-info.component';
+import { ImageShareComponent } from '../image-share/image-share.component';
 
 @Component({
   selector: 'app-image',
@@ -71,11 +73,13 @@ export class ImageComponent implements OnInit {
   }
 
   showInfo() {
-    return; // open bottom sheet here
+    this.bottomSheet.open(ImageInfoComponent, { data: this.model.user });
+    return;
   }
 
   showShare() {
-    return; // open bottom sheet here
+    this.bottomSheet.open(ImageShareComponent, { data: this.model.links });
+    return;
   }
 
   goBack() {
