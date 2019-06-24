@@ -38,6 +38,10 @@ export class ImageComponent implements OnInit {
 
   @HostListener('window:keyup', ['$event'])
   KeyboardEvent(event: KeyboardEvent) {
+    if (event.keyCode === 27) {
+      this.router.navigate(['/']);
+    }
+
     if (event.keyCode === 37) {
       this.backward();
       return;
@@ -95,7 +99,6 @@ export class ImageComponent implements OnInit {
   }
 
   backward() {
-    console.log('here')
     this.router.navigate([`photos/${this.prev.id}`]);
   }
 }
