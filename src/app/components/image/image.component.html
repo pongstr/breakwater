@@ -1,0 +1,72 @@
+<div id="image-component" class="image-lightbox">
+
+  <div class="image-component__toolbar">
+    <div class="image-component-toolbar__column">
+      <button mat-icon-button aria-label="Go Back"
+        matTooltip="Back to Photos"
+        matTooltipPosition="after"
+        (click)="goBack()">
+        <mat-icon aria-hidden="false">arrow_back</mat-icon>
+      </button>
+    </div>
+
+    <div class="image-component-toolbar__column toolbar-column--text-center">
+      <button mat-icon-button aria-label="Share Photo"
+        matTooltip="Share this Photo"
+        matTooltipPosition="below"
+        (click)="showShare()">
+        <mat-icon aria-hidden="false">share</mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="Show Information"
+        matTooltip="Show Information"
+        matTooltipPosition="below"
+        (click)="showInfo()">
+        <mat-icon aria-hidden="false">copyright</mat-icon>
+      </button>
+
+      <button mat-icon-button  aria-label="Add to Favourites"
+        matTooltip="Add to Favourites"
+        matTooltipPosition="below">
+        <mat-icon aria-hidden="false">favorite_border</mat-icon>
+      </button>
+
+      <button mat-icon-button  aria-label="Remove from Favourites"
+        matTooltip="Remove from Favourites"
+        matTooltipPosition="below">
+        <mat-icon aria-hidden="false">delete_outline</mat-icon>
+      </button>
+    </div>
+
+    <div class="image-component-toolbar__column toolbar-column--text-right">
+      <button mat-icon-button  aria-label="Close"
+        matTooltip="Close"
+        matTooltipPosition="before"
+        (click)="close()">
+        <mat-icon aria-hidden="false">close</mat-icon>
+      </button>
+    </div>
+  </div><!-- end of .image-component-toolbar -->
+
+  <div class="image-component__theater">
+    <div [style.backgroundImage]="getURL()"></div>
+  </div>
+
+  <div class="image-component__navigator navigator--left">
+    <button mat-icon-button aria-label="Go Back"
+      matTooltip="Previous Photo"
+      matTooltipPosition="after"
+      (click)="backward()">
+      <mat-icon aria-hidden="false">arrow_back_ios</mat-icon>
+    </button>
+  </div>
+
+  <div class="image-component__navigator navigator--right">
+    <button mat-icon-button aria-label="Go Back"
+      matTooltip="Next Photo"
+      matTooltipPosition="before"
+      (click)="forward()">
+      <mat-icon aria-hidden="false">arrow_forward_ios</mat-icon>
+    </button>
+  </div>
+</div><!-- end of #image-component -->
