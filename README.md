@@ -1,27 +1,22 @@
-# Breakwater
+Breakwater [Frontend Engineer Skill Test]
+---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+[![CircleCI](https://circleci.com/gh/pongstr/breakwater/tree/development.svg?style=svg&circle-token=4e2504ba29d20b2ad2810c0e9e4c9e8a10c2a6f8)](https://circleci.com/gh/pongstr/breakwater/tree/development)
 
-## Development server
+### Tasks
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Build an image collection with responsive UI.
+- Load collection from an api resource.
+- Open an image in a modal window kind of thing.
+- Traverse through items in the collection with:
+    - ui controls
+    - keyboard controls
 
-## Code scaffolding
+### Progress Timeline
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> Progress timeline goes here
 
-## Build
+### Available Distribution:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Source Dist [latest](https://github.com/pongstr/breakwater/releases)
+- Web Dist [https://breakwater.pongstr.io/](https://breakwater.pongstr.io/)
