@@ -18,6 +18,12 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: npm run test:ci
-      - run: npm run build:prod
+      - run:
+          name: "NPM Test"
+          command: npm run test:ci
+      - run:
+          name: "NPM Build"
+          command: npm run build:prod
+      - run:
+          name: "Firebase Deploy"
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
