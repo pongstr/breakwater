@@ -1,18 +1,32 @@
+import 'hammerjs';
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from 'app/app.component';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule, MetaReducer } from '@ngrx/store';
+import { HttpClientModule } from '@angular/common/http';
+
+import { GalleryEffects } from 'app/store/effects';
+import { AppReducers } from 'app/store/reducers';
 import { MaterialModule } from 'app/modules/material.module';
+import { interceptorProvider} from 'app/providers/interceptors';
+import { AppComponent } from 'app/app.component';
+
+const metaReducers: MetaReducer<any>[] = [];
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        HttpClientModule,
         RouterTestingModule,
         MaterialModule,
+        StoreModule.forRoot(AppReducers, { metaReducers }),
+        EffectsModule.forRoot([GalleryEffects]),
       ],
-      declarations: [
-        AppComponent
+      providers: [
+        interceptorProvider()
       ],
+      declarations: [AppComponent],
     }).compileComponents();
   }));
 

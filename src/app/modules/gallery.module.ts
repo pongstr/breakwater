@@ -7,6 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from 'app/modules/routing.module';
 import { MaterialModule } from 'app/modules/material.module';
 import { AppReducers } from 'app/store/reducers'
+import { GridComponent } from 'app/components/grid/grid.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,9 @@ import { AppReducers } from 'app/store/reducers'
     MaterialModule,
     StoreModule.forFeature('gallery', AppReducers)
   ],
-  declarations: [],
+  declarations: [
+    GridComponent
+  ],
   entryComponents: [],
   providers: [],
 

@@ -1,0 +1,12 @@
+
+<div class="grid-component-container" *ngIf="collection$ | async">
+  <mat-grid-list gutterSize="8" [cols]="breakpoint" rowHeight="220px" (window:resize)="getScreenWidth($event)">
+    <mat-grid-tile *ngFor="let item of (collection$ | async).body"
+      [style.background-color]="item.color">
+      <a class="mat-grid-tile__image"
+        routerLink="photos/{{ item.id }}"
+        [style.background-image]="getBgImage(item.urls)">
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
