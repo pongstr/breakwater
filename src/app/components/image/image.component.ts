@@ -95,10 +95,12 @@ export class ImageComponent implements OnInit {
   }
 
   forward() {
+    this.bottomSheet.dismiss();
     this.router.navigate([`photos/${this.next.id}`]);
   }
 
   backward() {
+    this.bottomSheet.dismiss();
     this.router.navigate([`photos/${this.prev.id}`]);
   }
 }
